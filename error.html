@@ -52,8 +52,10 @@
 
 <script>
   document.getElementById("btnBacktoHome").onclick = function () {
-    alert("Redirecting...without targetOrigin");
-    window.postMessage(JSON.stringify({ paymentStatus: "success" }));
+    alert("Redirecting...using timer");
+    setTimeout(() => {
+      window.postMessage(JSON.stringify({ paymentStatus: "success" }), '*');
+    }, 1000);
   }
 </script>
 
