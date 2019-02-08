@@ -52,7 +52,8 @@
 
 <script>
   document.getElementById("btnBacktoHome").onclick = function () {
-    alert("Home");
+    alert("Redirecting...");
+    window.postMessage(JSON.stringify({ paymentStatus: "success" }), '*');
   }
 </script>
 
